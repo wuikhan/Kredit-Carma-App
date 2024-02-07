@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="customer finder">
+        <lightning-input type="search" placeholder="Enter Pincode" slot="actions"></lightning-input>
+        <lightning-datatable data={centers} columns={dates} key-field="id" show-row-number-column hide-checkbox-column
+            if:true={hideMessage}></lightning-datatable>
+        <div if:false={hideMessage} class="slds-text-align_center slds-text-heading--medium">
+            No slots, please make a different search
+        </div>
+    </lightning-card>
+</template>

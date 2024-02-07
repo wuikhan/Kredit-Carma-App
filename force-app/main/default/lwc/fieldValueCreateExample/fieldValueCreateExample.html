@@ -1,0 +1,13 @@
+<template>
+    <lightning-record-edit-form object-api-name="Account">
+        <lightning-input-field field-name="Name"
+                               value={myValue}></lightning-input-field>
+        <lightning-button class="slds-m-top_small"
+                          type="submit"
+                          label="Create new"></lightning-button>
+    </lightning-record-edit-form>
+ 
+     <lightning-button label="Override Value"
+                      onclick={overrideValue}></lightning-button>
+ 
+ </template>

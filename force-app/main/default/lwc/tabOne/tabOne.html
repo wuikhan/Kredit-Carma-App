@@ -1,0 +1,37 @@
+<template
+  ><div class="slds-var-p-around_medium lgc-bg">
+    <lightning-input
+      type="text"
+      name="fieldOne"
+      label="Field One"
+      class="fone"
+      onchange={onchangeHandler}
+    ></lightning-input>
+  </div>
+
+  <div class="slds-var-p-around_medium lgc-bg">
+    <lightning-input
+      name="fieldTwo"
+      type="text"
+      label="Field Two"
+      onchange={onchangeHandler}
+    ></lightning-input>
+  </div>
+
+  <div class="slds-var-p-around_medium lgc-bg">
+    <lightning-input
+      type="text"
+      name="fieldThree"
+      label="Field Three"
+      onchange={onchangeHandler}
+    ></lightning-input>
+  </div>
+
+  <lightning-button
+    variant="brand"
+    label="Next"
+    title="Primary action"
+    onclick={handleClick}
+    class="slds-var-m-left_x-small"
+  ></lightning-button
+></template>

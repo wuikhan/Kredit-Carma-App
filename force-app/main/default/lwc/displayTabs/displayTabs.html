@@ -1,0 +1,20 @@
+<template>
+  <lightning-card>
+    <lightning-tabset>
+      <lightning-tab label="Item One">
+        <c-tab-one ondata={dataFromTabOneHandler}></c-tab-one>
+      </lightning-tab>
+      <lightning-tab label="Item Two">
+        <c-tab-two ondatatwo={dataFromTabTwoHandler}></c-tab-two>
+      </lightning-tab>
+      <lightning-tab label="Item Three">
+        <c-tab-three></c-tab-three>
+      </lightning-tab>
+
+      <lightning-tab label="Item Four">
+        <c-result></c-result>
+      </lightning-tab>
+    </lightning-tabset>
+    {newdata}
+  </lightning-card>
+</template>

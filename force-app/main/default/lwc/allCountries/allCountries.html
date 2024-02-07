@@ -1,0 +1,20 @@
+<template>
+    <ul>
+        <template for:each={countries} for:item="country">
+            <li key={country.Id}>
+                {country.countryName}
+            </li>
+        </template>
+    </ul> 
+<ul>
+    <template iterator:country={countries}>
+        <li key={country.value.Id}>
+            <div if:true={country.first}>----Begin----</div>
+            {country.value.countryName}
+            {country.value.countryCode}
+            <div if:true={country.last}>----End----</div>
+        </li>
+    </template>
+</ul>
+
+</template>

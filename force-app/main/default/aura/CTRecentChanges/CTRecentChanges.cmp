@@ -1,0 +1,37 @@
+<aura:component controller="CTRecentChangesController">
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}"></aura:handler>
+
+  <aura:attribute
+    name="isSearching"
+    type="Boolean"
+    default="false"
+  ></aura:attribute>
+  <aura:attribute name="data" type="List"></aura:attribute>
+  <aura:attribute name="columns" type="List"></aura:attribute>
+  <aura:attribute name="scope" type="String" default="person"></aura:attribute>
+  <aura:attribute name="initialResponse" type="List"></aura:attribute>
+  <aura:attribute name="resizeColumnDisabled" type="Boolean" default="true" />
+
+  <lightning:card title="Recent Updates">
+    <aura:set attribute="actions">
+      <div onkeyup="{! c.handleKeyUp }">
+        <lightning:input
+          name="search"
+          label="Hit 'enter' to search"
+          aura:id="enter-search"
+          isLoading="{!v.isSearching}"
+          type="search"
+          placeholder="Search"
+        ></lightning:input>
+      </div>
+    </aura:set>
+    <lightning:datatable
+      keyField="id"
+      resizeColumnDisabled="{! v.resizeColumnDisabled }"
+      data="{! v.data }"
+      columns="{! v.columns }"
+      hideCheckboxColumn="true"
+      onrowaction="{! c.handleRowAction }"
+    />
+  </lightning:card>
+</aura:component>

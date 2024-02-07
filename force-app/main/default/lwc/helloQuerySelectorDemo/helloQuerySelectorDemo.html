@@ -1,0 +1,14 @@
+<template>
+  <lightning-card>
+    <div class="slds-var-m-around_medium">
+      <h1>Hello I am heading</h1>
+      <template for:each={userNames} for:item="name">
+        <div class="myname" key={name}>{name}</div>
+      </template>
+      <lightning-button label="Click me" onclick={fetchDetails}
+        >Fetch Details</lightning-button
+      >
+    </div>
+    <div class="child" lwc:dom="manual"></div>
+  </lightning-card>
+</template>

@@ -1,0 +1,29 @@
+<template>
+  <lightning-card title="Iteration over markup using ForEach / Iterator">
+    <!-- 
+        <lightning-card title="Conditional Rendering">
+            <div style="padding-left: 10px">
+      <lightning-input
+        type="checkbox"
+        label="Show Div"
+        onchange={showDivHandler}
+      ></lightning-input>
+      <template if:true={displayDiv}>
+        <div>I am here</div>
+      </template>
+    </div> 
+</lightning-card>-->
+    <p style="padding-left: 10px">Below example is using ForEach directive</p>
+    <template for:each={cityList} for:item="city">
+      <p key={city} style="padding-left: 10px">{city}</p>
+    </template>
+
+    <p style="padding-left: 10px">Below example is using Iterator directive</p>
+    <p style="padding-left: 10px">
+      the advantage of using iterator is we can identify the first/last element
+    </p>
+    <template iterator:it={cityList}>
+      <p key={it.value} style="padding-left: 10px">{it.value}</p>
+    </template>
+  </lightning-card>
+</template>

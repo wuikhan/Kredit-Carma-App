@@ -1,0 +1,34 @@
+<template>
+  <div class="slds-card slds-p-around_medium">
+    <lightning-tabset>
+      <lightning-tab
+        label="All Patients"
+        value="allPatients"
+        onactive={tabChangeHandler}
+      >
+        <lightning-layout>
+          <lightning-layout-item size="4" padding="around-small">
+            <c-patient></c-patient>
+          </lightning-layout-item>
+          <lightning-layout-item size="8" padding="around-small">
+            <c-patient-detail></c-patient-detail>
+          </lightning-layout-item>
+        </lightning-layout>
+      </lightning-tab>
+      <lightning-tab
+        label="Upcoming Appointments"
+        value="upcomingAppointments"
+        onactive={tabChangeHandler}
+      >
+        Two Content !
+      </lightning-tab>
+      <lightning-tab
+        label="ASAP List"
+        value="asapList"
+        onactive={tabChangeHandler}
+      >
+        Three Content !
+      </lightning-tab>
+    </lightning-tabset>
+  </div>
+</template>

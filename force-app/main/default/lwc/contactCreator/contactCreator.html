@@ -1,0 +1,16 @@
+<template>
+  <lightning-layout>
+    <lightning-layout-item size="12">
+      <div
+        class="custom-box slds-box slds-p-around_medium"
+      >
+        <lightning-record-form
+          object-api-name={contactObject}
+          fields={myFields}
+          onsuccess={handleContactCreated}
+        >
+        </lightning-record-form>
+      </div>
+    </lightning-layout-item>
+  </lightning-layout>
+</template>

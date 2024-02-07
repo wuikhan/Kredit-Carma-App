@@ -1,0 +1,17 @@
+<template>
+    <lightning-layout multiple-rows="true">
+        <lightning-layout-item size="12">
+            <lightning-tabset active-tab-value={selectedTabValue}>
+                <lightning-tab label="Insurance Detail" value="insuranceDetail" onactive={tabChangeHandler}>
+
+
+
+                </lightning-tab>
+                <lightning-tab label="Medication Information" value="medicationDetail" onactive={tabChangeHandler}>
+                    Two Content !
+                </lightning-tab>
+
+            </lightning-tabset>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

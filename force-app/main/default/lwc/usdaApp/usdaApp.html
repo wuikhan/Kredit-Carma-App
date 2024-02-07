@@ -1,0 +1,114 @@
+<template>
+  <lightning-card>
+    <lightning-tabset>
+      <lightning-tab label="Item One">
+        <lightning-accordion
+          class="example-accordion"
+          onsectiontoggle={handleToggleSection}
+          active-section-name="B"
+        >
+          <lightning-accordion-section name="A" label="Accordion Title A">
+            <div class="slds-var-p-around_medium lgc-bg">
+              <lightning-input type="text" label="Field One"></lightning-input>
+            </div>
+          </lightning-accordion-section>
+
+          <lightning-accordion-section name="B" label="Accordion Title B">
+            <div class="slds-var-p-around_medium lgc-bg">
+              <lightning-input type="text" label="Field Two"></lightning-input>
+            </div>
+          </lightning-accordion-section>
+
+          <lightning-accordion-section name="C" label="Accordion Title C">
+            <div class="slds-var-p-around_medium lgc-bg">
+              <lightning-input
+                type="text"
+                label="Field Three"
+              ></lightning-input>
+            </div>
+          </lightning-accordion-section>
+        </lightning-accordion>
+
+        <lightning-button
+          variant="brand"
+          label="Next"
+          title="Primary action"
+          onclick={handleClick}
+          class="slds-var-m-left_x-small"
+        ></lightning-button>
+      </lightning-tab>
+      <lightning-tab label="Item Two" title="2nd tab extended title">
+        <lightning-accordion
+          class="example-accordion"
+          onsectiontoggle={handleToggleSection}
+          active-section-name="B"
+        >
+          <lightning-accordion-section name="A" label="Accordion Title A">
+            <div class="slds-var-p-around_medium lgc-bg">
+              <lightning-input type="text" label="Field One"></lightning-input>
+            </div>
+          </lightning-accordion-section>
+
+          <lightning-accordion-section name="B" label="Accordion Title B">
+            <div class="slds-var-p-around_medium lgc-bg">
+              <lightning-input type="text" label="Field Two"></lightning-input>
+            </div>
+          </lightning-accordion-section>
+
+          <lightning-accordion-section name="C" label="Accordion Title C">
+            <div class="slds-var-p-around_medium lgc-bg">
+              <lightning-input
+                type="text"
+                label="Field Three"
+              ></lightning-input>
+            </div>
+          </lightning-accordion-section>
+        </lightning-accordion>
+
+        <lightning-button
+          variant="brand"
+          label="Next"
+          title="Primary action"
+          onclick={handleClick}
+          class="slds-var-m-left_x-small"
+        ></lightning-button>
+      </lightning-tab>
+      <lightning-tab label="Item Three">
+        <lightning-accordion
+          class="example-accordion"
+          onsectiontoggle={handleToggleSection}
+          active-section-name="B"
+        >
+          <lightning-accordion-section name="A" label="Accordion Title A">
+            <div class="slds-var-p-around_medium lgc-bg">
+              <lightning-input type="text" label="Field One"></lightning-input>
+            </div>
+          </lightning-accordion-section>
+
+          <lightning-accordion-section name="B" label="Accordion Title B">
+            <div class="slds-var-p-around_medium lgc-bg">
+              <lightning-input type="text" label="Field Two"></lightning-input>
+            </div>
+          </lightning-accordion-section>
+
+          <lightning-accordion-section name="C" label="Accordion Title C">
+            <div class="slds-var-p-around_medium lgc-bg">
+              <lightning-input
+                type="text"
+                label="Field Three"
+              ></lightning-input>
+            </div>
+          </lightning-accordion-section>
+        </lightning-accordion>
+
+        <lightning-button
+          variant="brand"
+          label="Next"
+          title="Primary action"
+          onclick={handleClick}
+          class="slds-var-m-left_x-small"
+        ></lightning-button
+      ></lightning-tab>
+    </lightning-tabset>
+  </lightning-card>
+</template>

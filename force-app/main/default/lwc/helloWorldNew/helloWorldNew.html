@@ -1,0 +1,57 @@
+<template>
+  <lightning-card title="Two Way Data Binding">
+    <div class="slds-var-m-around_small">
+      <div>{title}</div>
+      <lightning-input
+        type="text"
+        label="Title"
+        onchange={updateValue}
+      ></lightning-input>
+    </div>
+  </lightning-card>
+
+  <lightning-card title="@track properties">
+    <div class="slds-var-m-around_small">
+      <div>{address.city} is my city</div>
+
+      <lightning-input
+        type="text"
+        label="Enter City name"
+        onchange={trackHandler}
+      ></lightning-input>
+    </div>
+  </lightning-card>
+  <lightning-card title="using spread operator">
+    <div class="slds-var-m-around_small">
+      <div>{person.name} is my name</div>
+
+      <lightning-input
+        type="text"
+        label="Enter City name"
+        onchange={updatename}
+      ></lightning-input>
+    </div>
+  </lightning-card>
+
+  <lightning-card title="Getter Example">
+    <div class="slds-var-m-around_small">
+      <div>first user is {firstUser}</div>
+      <div>multiplier for num1 and num2 is {multiply}</div>
+    </div>
+  </lightning-card>
+
+  <!-- helloConditionalRendering.html -->
+
+  <lightning-card title="HelloConditionalRendering" icon-name="custom:custom14">
+    <div class="slds-var-m-around_medium">
+      <lightning-input
+        type="checkbox"
+        label="Show details"
+        onchange={handleChange}
+      ></lightning-input>
+      <template lwc:if={areDetailsVisible}>
+        <div class="slds-var-m-vertical_medium">These are the details!</div>
+      </template>
+    </div>
+  </lightning-card>
+</template>

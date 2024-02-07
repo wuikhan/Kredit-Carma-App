@@ -1,0 +1,21 @@
+<template>
+    <lightning-input name="fname" label="First Name" onchange={handleChange}></lightning-input>
+    <lightning-input name="lname" label="Last Name" onchange={handleChange}></lightning-input>
+    {changetoUppercase}
+
+    <lightning-input type="checkbox" label="Show details" onchange={showText}></lightning-input>
+    <template if:true={areDetailsVisible}>
+        <p>this will show up if the checkbox is checked</p>
+    </template>
+    <lightning-card title="HelloForEach" icon-name="custom:custom14">
+        <ul class="slds-m-around_medium">
+
+            <template for:each={employees} for:item="employee">
+                <li key={employee.id}>
+                    {employee.name}
+                    {employee.title}
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+</template>

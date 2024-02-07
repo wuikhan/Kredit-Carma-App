@@ -1,0 +1,37 @@
+<template>
+  <div class="slds-p-around_medium lgc-bg">
+    <ul>
+      <template if:true={responseReceived}>
+        <template for:each={patients.data} for:item="patient">
+          <li
+            class="slds-item patient"
+            key={patient.Id}
+            onclick={patientClicked}
+          >
+            <lightning-tile
+              label={patient.Name}
+              href="/bruce.html"
+              type="media"
+            >
+              <lightning-avatar
+                slot="media"
+                src={setAvatar}
+                fallback-icon-name="standard:person_account"
+                alternative-text={patient.Name}
+              ></lightning-avatar>
+              <ul class="slds-list_horizontal slds-has-dividers_right">
+                <li class="slds-item">
+                  {patient.Last_Name__c}, {patient.First_Name__c}
+                </li>
+                <li class="slds-item">
+                  {patient.Marital_Status__c}, {patient.Date_of_Birth__c},
+                  {patient.City_of_Birth__c}, {patient.Birth_Sex__c}
+                </li>
+              </ul>
+            </lightning-tile>
+          </li>
+        </template>
+      </template>
+    </ul>
+  </div>
+</template>

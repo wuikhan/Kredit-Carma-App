@@ -1,0 +1,18 @@
+<template>
+    !-- recordEditFormStaticAccount.html -->
+<template if:true={account.data}>
+    <lightning-record-edit-form object-api-name={objectApiName} 
+            record-id={recordId}
+            onsubmit={handleSubmit}>
+        <lightning-input label="Name" 
+                value={name} 
+                onchange={handleChange}
+                class="slds-m-bottom_x-small"></lightning-input>
+
+        <lightning-button class="slds-m-top_small"
+                 type="submit"
+                 label="Update Account Name">
+        </lightning-button>
+    </lightning-record-edit-form>
+</template>
+</template>

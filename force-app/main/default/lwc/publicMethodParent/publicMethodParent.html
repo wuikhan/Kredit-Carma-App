@@ -1,0 +1,15 @@
+<template>
+  <lightning-card title="Call methods on child component">
+    <lightning-input
+      value={value}
+      label="Checkbox Value"
+      onchange={onInputChangeHandler}
+    ></lightning-input>
+    <lightning-button
+      label="Select Checkbox"
+      onclick={checkboxSelectedHandler}
+    ></lightning-button>
+    <div>I am a div in the parent component</div>
+    <c-public-method-child></c-public-method-child>
+  </lightning-card>
+</template>

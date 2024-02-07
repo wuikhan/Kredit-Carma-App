@@ -1,0 +1,13 @@
+.patient:hover {
+    background-color: lightblue;
+    border-radius: 5px;
+    
+}
+
+.patient {
+    padding: 10px 10px 10px 10px;
+}
+
+.slds-card {
+    height: 600px;
+}

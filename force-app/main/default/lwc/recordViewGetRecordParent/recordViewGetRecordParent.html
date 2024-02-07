@@ -1,0 +1,19 @@
+<!-- recordViewGetRecordParent.html -->
+<template>
+    <lightning-record-view-form
+        object-api-name={objectApiName}
+        record-id={recordId}>
+        <lightning-messages></lightning-messages>
+        <lightning-output-field
+            field-name={nameField}
+        ></lightning-output-field>
+       
+        <div class="slds-form-element slds-form-element_stacked">
+            <span class="slds-form-element__label">Owner Email</span>
+            <div class="slds-form-element__control">
+                <lightning-formatted-email value={ownerField}>
+                </lightning-formatted-email >
+            </div>
+        </div>
+    </lightning-record-view-form>
+</template>

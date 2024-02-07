@@ -1,0 +1,10 @@
+<template>
+  <lightning-card title="Data Binding" class="greeting-class">
+    <p class="greeting-class">hello {dynamicGreeting}</p>
+    <lightning-input
+      class="greeting-class"
+      label="Update the value"
+      onchange={greetingChangeHandler}
+    ></lightning-input>
+  </lightning-card>
+</template>
